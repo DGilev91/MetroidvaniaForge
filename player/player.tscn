@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://xhvlothbeiv3"]
 
 [ext_resource type="Script" uid="uid://d4fekylvx2kxo" path="res://player/scripts/player.gd" id="1_oul6g"]
-[ext_resource type="Script" uid="uid://btm3r7nds0hpx" path="res://player/states/00_player_stale.gd" id="2_rkbax"]
+[ext_resource type="Script" uid="uid://bfnw1fkvd5dya" path="res://player/states/idle.gd" id="2_rkbax"]
+[ext_resource type="Script" uid="uid://81bjku1p75ec" path="res://player/states/run.gd" id="3_g1dw6"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kqu6x"]
 size = Vector2(18, 48)
@@ -30,4 +31,4 @@ shape = SubResource("RectangleShape2D_kqu6x")
 script = ExtResource("2_rkbax")
 
 [node name="Run" type="Node" parent="States" unique_id=11468595]
-script = ExtResource("2_rkbax")
+script = ExtResource("3_g1dw6")
