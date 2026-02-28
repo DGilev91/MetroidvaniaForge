@@ -1,5 +1,10 @@
 class_name  Player extends CharacterBody2D
 
+#region //export variables
+@export var move_speed: float  = 300
+#endregion
+
+
 @onready var states_node: Node = $States
 
 #region //State Machine Variables
@@ -43,6 +48,7 @@ func initialize_states() -> void:
 		
 	change_state(current_state)
 	current_state.enter()
+	$Label.text = current_state.name
 		
 func change_state(new_state: PlayerState) -> void:
 	if new_state == null:
@@ -55,8 +61,10 @@ func change_state(new_state: PlayerState) -> void:
 	states.push_front(new_state)
 	current_state.enter()
 	states.resize(states.size() - 1)
+	$Label.text = current_state.name
 
-func update_direction() -> void:
-	#var prev_direction: Vector2 = direction
-	direction = Input.get_vector("LEFT", "RIGHT", "UP", "DOWN") 
+func update_direction() -> void:	
+	var x_axis = Input.get_axis("LEFT", "RIGHT")
+	var y_axis = Input.get_axis("UP", "DOWN")	
+	direction = Vector2(x_axis, y_axis)
 	
