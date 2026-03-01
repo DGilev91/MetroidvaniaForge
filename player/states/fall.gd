@@ -1,4 +1,4 @@
-class_name PlayerStateIdle extends PlayerState
+class_name PlayerStateFall extends PlayerState
 
 func init() -> void:
 	print("init! ", name)
@@ -10,17 +10,15 @@ func exit() -> void:
 	print("exit! ", name)
 	
 func handle_inpud(_event: InputEvent) -> PlayerState:
-	if _event.is_action_pressed("JUMP"):
-		return jump
 	return next_state
 
 func process(_delta: float) -> PlayerState:
-	if player.direction.x != 0:
-		return run
+	player.velocity.x = player.direction.x * player.move_speed
 	return next_state
 	
 func physics_process(delta: float) -> PlayerState:
-	player.velocity.x = 0
-	if not player.is_on_floor():
-		return fall
+	if player.is_on_floor():
+		player.add_debug_indicator(Color.RED)
+		return idle
+	
 	return next_state

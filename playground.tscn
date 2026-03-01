@@ -29,8 +29,8 @@ shape = SubResource("RectangleShape2D_embak")
 position = Vector2(329, 107)
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1747654771]
-position = Vector2(765, 198)
-scale = Vector2(1.6171857, 2.7656248)
+position = Vector2(734.677, 213.90366)
+scale = Vector2(3.5123715, 1.7716459)
 texture = SubResource("GradientTexture2D_6miw8")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D3" unique_id=1417744470]
