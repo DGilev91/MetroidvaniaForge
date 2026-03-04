@@ -10,7 +10,7 @@ func init() -> void:
 func enter() -> void:
 	print("enter! ", name)
 	player.add_debug_indicator(Color.LIGHT_GREEN)
-	player.velocity.y -= jump_velocity
+	player.velocity.y = -jump_velocity
 	
 func exit() -> void:
 	print("exit! ", name)
