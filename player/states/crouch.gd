@@ -1,4 +1,4 @@
-class_name PlayerStateRun extends PlayerState
+class_name PlayerStateCrouch extends PlayerState
 
 func init() -> void:
 	print("init! ", name)
@@ -15,14 +15,12 @@ func handle_inpud(_event: InputEvent) -> PlayerState:
 	return next_state
 
 func process(_delta: float) -> PlayerState:
-	if player.direction.x == 0:
+	if player.direction.y <= 0.5:
 		return idle
-	elif player.direction.y > 0.5:
-		return crouch
 	return next_state
 	
 func physics_process(delta: float) -> PlayerState:
-	player.velocity.x = player.direction.x * player.move_speed
+	player.velocity.x = 0
 	if not player.is_on_floor():
 		return fall
 	return next_state
