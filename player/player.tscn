@@ -13,6 +13,9 @@ size = Vector2(18, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqu6x"]
 size = Vector2(16, 46)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6k8r"]
+size = Vector2(16, 28)
+
 [node name="Player" type="CharacterBody2D" unique_id=805989142]
 script = ExtResource("1_oul6g")
 
@@ -42,9 +45,14 @@ script = ExtResource("6_g6k8r")
 position = Vector2(0, -24)
 texture = SubResource("PlaceholderTexture2D_kqu6x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=136202267]
+[node name="CollisionStand" type="CollisionShape2D" parent="." unique_id=136202267]
 position = Vector2(0, -23)
 shape = SubResource("RectangleShape2D_kqu6x")
+
+[node name="CollisionCrouch" type="CollisionShape2D" parent="." unique_id=872353936]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_g6k8r")
+disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=142425986]
 
