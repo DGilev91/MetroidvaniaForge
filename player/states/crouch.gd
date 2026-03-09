@@ -21,6 +21,9 @@ func exit() -> void:
 	
 func handle_inpud(_event: InputEvent) -> PlayerState:
 	if _event.is_action_pressed("JUMP"):
+		if player.on_way_platform_raycast.is_colliding():
+			player.position.y += 4
+			return fall
 		return jump
 	return next_state
 

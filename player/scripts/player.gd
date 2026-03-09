@@ -6,6 +6,7 @@ const DEBUG_JUMP_INDICATOR = preload("uid://cn3pv6slcb2b2")
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var collision_stand: CollisionShape2D = $CollisionStand
 @onready var collision_crouch: CollisionShape2D = $CollisionCrouch
+@onready var on_way_platform_raycast: RayCast2D = $OnWayPlatformRaycast
 #endregion
 
 #region //export variables
