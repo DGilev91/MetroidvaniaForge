@@ -13,6 +13,16 @@ height = 32
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_embak"]
 size = Vector2(32, 32)
 
+[sub_resource type="Gradient" id="Gradient_rupst"]
+colors = PackedColorArray(0, 0.27058825, 0.59607846, 0.16470589, 0.98927885, 0.9464553, 1.540184e-06, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wt17y"]
+gradient = SubResource("Gradient_rupst")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rupst"]
+size = Vector2(63.75409, 64.00995)
+
 [node name="Playground" type="Node2D" unique_id=1595630381]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1644173331]
@@ -24,9 +34,6 @@ texture = SubResource("GradientTexture2D_6miw8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=878255916]
 shape = SubResource("RectangleShape2D_embak")
-
-[node name="Player" parent="." unique_id=805989142 instance=ExtResource("1_rupst")]
-position = Vector2(329, 107)
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1747654771]
 position = Vector2(734.677, 213.90366)
@@ -92,3 +99,18 @@ texture = SubResource("GradientTexture2D_6miw8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D8/StaticBody2D" unique_id=2055845907]
 scale = Vector2(1, 0.99999994)
 shape = SubResource("RectangleShape2D_embak")
+
+[node name="OnWayPlatform" type="Sprite2D" parent="." unique_id=1749190331]
+position = Vector2(506.86722, 166.69664)
+rotation = 3.1415927
+scale = Vector2(-4.0763435, -0.49849784)
+texture = SubResource("GradientTexture2D_wt17y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="OnWayPlatform" unique_id=346992609]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OnWayPlatform/StaticBody2D" unique_id=360960646]
+shape = SubResource("RectangleShape2D_rupst")
+one_way_collision = true
+
+[node name="Player" parent="." unique_id=805989142 instance=ExtResource("1_rupst")]
+position = Vector2(396.64355, -42.74884)
