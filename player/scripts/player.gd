@@ -11,7 +11,7 @@ const DEBUG_JUMP_INDICATOR = preload("uid://cn3pv6slcb2b2")
 #endregion
 
 #region //export variables
-@export var move_speed: float  = 300
+@export var move_speed: float  = 250
 #endregion
 
 
@@ -75,9 +75,13 @@ func change_state(new_state: PlayerState) -> void:
 	$Label.text = current_state.name
 
 func update_direction() -> void:	
+	var prev_direction: Vector2 = direction
 	var x_axis = Input.get_axis("LEFT", "RIGHT")
 	var y_axis = Input.get_axis("UP", "DOWN")	
 	direction = Vector2(x_axis, y_axis)
+	
+	if prev_direction.x != direction.x && direction.x != 0:
+		sprite.flip_h = false if direction.x > 0 else true
 	
 func add_debug_indicator(color: Color = Color.RED) -> void:
 	var d: Node2D = DEBUG_JUMP_INDICATOR.instantiate()

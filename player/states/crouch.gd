@@ -10,15 +10,11 @@ func enter() -> void:
 	
 	player.collision_stand.disabled = true
 	player.collision_crouch.disabled = false
-	player.sprite.scale.y = 0.583
-	player.sprite.position.y = -14
 	
 func exit() -> void:
 	print("exit! ", name)
 	player.collision_stand.disabled = false
 	player.collision_crouch.disabled = true
-	player.sprite.scale.y = 1.0
-	player.sprite.position.y = -24
 	
 func handle_inpud(_event: InputEvent) -> PlayerState:
 	if _event.is_action_pressed("JUMP"):
