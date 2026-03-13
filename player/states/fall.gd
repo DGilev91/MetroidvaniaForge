@@ -37,7 +37,7 @@ func process(_delta: float) -> PlayerState:
 	jump_buffer_timer -= _delta
 	return next_state
 	
-func physics_process(delta: float) -> PlayerState:
+func physics_process(_delta: float) -> PlayerState:
 	if player.is_on_floor():
 		player.add_debug_indicator(Color.RED)
 		if jump_buffer_timer > 0:

@@ -18,7 +18,7 @@ func exit() -> void:
 	
 func handle_inpud(_event: InputEvent) -> PlayerState:
 	if _event.is_action_pressed("JUMP"):
-		if player.on_way_platform_raycast.is_colliding():
+		if player.on_way_platform_shape_cast.is_colliding():
 			player.position.y += 4
 			return fall
 		return jump
@@ -32,5 +32,6 @@ func process(_delta: float) -> PlayerState:
 func physics_process(_delta: float) -> PlayerState:
 	player.velocity.x -= player.velocity.x * deceleration_speed * _delta
 	if not player.is_on_floor():
+		print("dsfdsfds");
 		return fall
 	return next_state

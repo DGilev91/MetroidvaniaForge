@@ -21,7 +21,7 @@ func process(_delta: float) -> PlayerState:
 		return crouch
 	return next_state
 	
-func physics_process(delta: float) -> PlayerState:
+func physics_process(_delta: float) -> PlayerState:
 	player.velocity.x = player.direction.x * player.move_speed
 	if not player.is_on_floor():
 		return fall

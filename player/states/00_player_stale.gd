@@ -30,5 +30,5 @@ func process(_delta: float) -> PlayerState:
 	
 	return next_state
 	
-func physics_process(delta: float) -> PlayerState:
+func physics_process(_delta: float) -> PlayerState:
 	return next_state

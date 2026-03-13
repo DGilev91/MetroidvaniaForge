@@ -46,7 +46,7 @@ texture = SubResource("GradientTexture2D_6miw8")
 shape = SubResource("RectangleShape2D_embak")
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1181189996]
-position = Vector2(182.00002, 218)
+position = Vector2(182.00002, 218.75647)
 rotation = -1.3008955
 scale = Vector2(1.6171857, 12.137253)
 texture = SubResource("GradientTexture2D_6miw8")
