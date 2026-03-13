@@ -184,6 +184,7 @@ libraries/ = SubResource("AnimationLibrary_rgyib")
 autoplay = &"idle"
 
 [node name="OnWayPlatformShapeCast" type="ShapeCast2D" parent="." unique_id=2072489032]
+enabled = false
 shape = SubResource("RectangleShape2D_boad6")
 target_position = Vector2(0, 6)
 margin = 11.63

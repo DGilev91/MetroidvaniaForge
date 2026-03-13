@@ -18,6 +18,7 @@ func exit() -> void:
 	
 func handle_inpud(_event: InputEvent) -> PlayerState:
 	if _event.is_action_pressed("JUMP"):
+		player.on_way_platform_shape_cast.force_shapecast_update()
 		if player.on_way_platform_shape_cast.is_colliding():
 			player.position.y += 4
 			return fall
