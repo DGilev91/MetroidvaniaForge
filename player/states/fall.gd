@@ -11,7 +11,8 @@ func init() -> void:
 	print("init! ", name)
 	
 func enter() -> void:
-	print("enter! ", name)
+	player.animation_player.play("fall")
+	
 	player.gravity_multiplier = fall_gravity_multiplier
 	if player.previous_state == jump:
 		coyote_timer = 0

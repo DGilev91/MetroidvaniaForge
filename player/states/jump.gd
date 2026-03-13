@@ -8,7 +8,8 @@ func init() -> void:
 	print("init! ", name)
 	
 func enter() -> void:
-	print("enter! ", name)
+	player.animation_player.play("jump")
+	
 	player.add_debug_indicator(Color.LIGHT_GREEN)
 	player.velocity.y = -jump_velocity
 	

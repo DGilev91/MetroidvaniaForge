@@ -6,7 +6,8 @@ func init() -> void:
 	print("init! ", name)
 	
 func enter() -> void:
-	print("enter! ", name)
+	player.animation_player.play("crouch")
+	
 	player.collision_stand.disabled = true
 	player.collision_crouch.disabled = false
 	player.sprite.scale.y = 0.583
