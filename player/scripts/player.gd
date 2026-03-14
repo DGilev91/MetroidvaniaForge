@@ -12,6 +12,7 @@ const DEBUG_JUMP_INDICATOR = preload("uid://cn3pv6slcb2b2")
 
 #region //export variables
 @export var move_speed: float  = 250
+@export var max_fall_velocity : float = 600.0
 #endregion
 
 
@@ -44,6 +45,7 @@ func _process(_delta: float) -> void:
 	
 func _physics_process(_delta: float) -> void:	
 	velocity.y += gravity * gravity_multiplier * _delta
+	velocity.y = clampf(velocity.y, -1000.0, max_fall_velocity)
 	move_and_slide()
 	change_state(current_state.physics_process(_delta))
 

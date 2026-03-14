@@ -115,4 +115,4 @@ shape = SubResource("RectangleShape2D_rupst")
 one_way_collision = true
 
 [node name="Player" parent="." unique_id=805989142 instance=ExtResource("1_rupst")]
-position = Vector2(396.64355, -42.74884)
+position = Vector2(416.2367, -962.3472)
