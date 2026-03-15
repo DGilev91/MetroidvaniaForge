@@ -11,7 +11,7 @@ const DEBUG_JUMP_INDICATOR = preload("uid://cn3pv6slcb2b2")
 #endregion
 
 #region //export variables
-@export var move_speed: float  = 250
+@export var move_speed: float  = 300
 @export var max_fall_velocity : float = 600.0
 #endregion
 
@@ -34,6 +34,7 @@ var gravity_multiplier: float = 1.0
 
 
 func _ready() -> void:
+	floor_snap_length = 10
 	initialize_states()
 	
 func _unhandled_input(event: InputEvent) -> void:
