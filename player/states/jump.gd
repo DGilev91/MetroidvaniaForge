@@ -5,7 +5,8 @@ class_name PlayerStateJump extends PlayerState
 
 
 func init() -> void:
-	print("init! ", name)
+	#print("init! ", name)
+	pass
 	
 func enter() -> void:
 	player.animation_player.play("jump")
@@ -21,7 +22,7 @@ func enter() -> void:
 	
 	
 func exit() -> void:
-	print("exit! ", name)
+	#print("exit! ", name)
 	player.add_debug_indicator(Color.YELLOW)
 	
 func handle_inpud(_event: InputEvent) -> PlayerState:

@@ -171,6 +171,7 @@ disabled = true
 [node name="Camera2D" type="Camera2D" parent="." unique_id=142425986]
 
 [node name="Label" type="Label" parent="." unique_id=1862657943]
+visible = false
 offset_left = -34.0
 offset_top = -68.0
 offset_right = 36.0

@@ -8,7 +8,8 @@ var coyote_timer: float = 0;
 var jump_buffer_timer: float = 0;
 
 func init() -> void:
-	print("init! ", name)
+	#print("init! ", name)
+	pass
 	
 func enter() -> void:
 	player.animation_player.play("fall")
@@ -21,7 +22,7 @@ func enter() -> void:
 		coyote_timer = ciyote_time
 	
 func exit() -> void:
-	print("exit! ", name)
+	#print("exit! ", name)
 	player.gravity_multiplier = 1.0
 	jump_buffer_time = 0
 	

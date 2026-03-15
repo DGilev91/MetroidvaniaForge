@@ -1,13 +1,15 @@
 class_name PlayerStateIdle extends PlayerState
 
 func init() -> void:
-	print("init! ", name)
+	#print("init! ", name)
+	pass
 	
 func enter() -> void:
 	player.animation_player.play("idle")
 	
 func exit() -> void:
-	print("exit! ", name)
+	#print("exit! ", name)
+	pass
 	
 func handle_inpud(_event: InputEvent) -> PlayerState:
 	if _event.is_action_pressed("JUMP"):

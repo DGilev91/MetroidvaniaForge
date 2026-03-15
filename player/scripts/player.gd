@@ -88,11 +88,12 @@ func update_direction() -> void:
 		sprite.flip_h = false if direction.x > 0 else true
 	
 func add_debug_indicator(color: Color = Color.RED) -> void:
-	var d: Node2D = DEBUG_JUMP_INDICATOR.instantiate()
-	get_tree().root.add_child(d)
-	d.global_position = global_position
-	d.modulate = color
-	await get_tree().create_timer(3.0).timeout
-	d.queue_free()
+	#var d: Node2D = DEBUG_JUMP_INDICATOR.instantiate()
+	#get_tree().root.add_child(d)
+	#d.global_position = global_position
+	#d.modulate = color
+	#await get_tree().create_timer(3.0).timeout
+	#d.queue_free()
+	pass
 	
 	

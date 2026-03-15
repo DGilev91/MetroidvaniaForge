@@ -3,7 +3,8 @@ class_name PlayerStateCrouch extends PlayerState
 @export var deceleration_speed: float = 10
 
 func init() -> void:
-	print("init! ", name)
+	#print("init! ", name)
+	pass
 	
 func enter() -> void:
 	player.animation_player.play("crouch")
@@ -12,7 +13,7 @@ func enter() -> void:
 	player.collision_crouch.disabled = false
 	
 func exit() -> void:
-	print("exit! ", name)
+	#print("exit! ", name)
 	player.collision_stand.disabled = false
 	player.collision_crouch.disabled = true
 	
