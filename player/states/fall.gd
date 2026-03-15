@@ -23,6 +23,7 @@ func enter() -> void:
 func exit() -> void:
 	print("exit! ", name)
 	player.gravity_multiplier = 1.0
+	jump_buffer_time = 0
 	
 func handle_inpud(_event: InputEvent) -> PlayerState:
 	if _event.is_action_pressed("JUMP"):
@@ -42,6 +43,7 @@ func process(_delta: float) -> PlayerState:
 func physics_process(_delta: float) -> PlayerState:
 	if player.is_on_floor():
 		player.add_debug_indicator(Color.RED)
+		#if jump_buffer_timer > 0 and Input.is_action_pressed("JUMP"):
 		if jump_buffer_timer > 0:
 			return jump	
 			

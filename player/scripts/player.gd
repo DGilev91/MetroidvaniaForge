@@ -35,6 +35,7 @@ var gravity_multiplier: float = 1.0
 
 func _ready() -> void:
 	floor_snap_length = 10
+	Engine.time_scale = 0.5
 	initialize_states()
 	
 func _unhandled_input(event: InputEvent) -> void:

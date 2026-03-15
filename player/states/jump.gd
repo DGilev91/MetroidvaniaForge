@@ -14,6 +14,12 @@ func enter() -> void:
 	player.add_debug_indicator(Color.LIGHT_GREEN)
 	player.velocity.y = -jump_velocity
 	
+	if player.previous_state == fall and not Input.is_action_pressed("JUMP"):
+		await get_tree().physics_frame
+		player.velocity.y *= 0.5
+		player.change_state(fall)
+	
+	
 func exit() -> void:
 	print("exit! ", name)
 	player.add_debug_indicator(Color.YELLOW)
