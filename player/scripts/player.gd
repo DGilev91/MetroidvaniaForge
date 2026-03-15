@@ -87,7 +87,7 @@ func update_direction() -> void:
 	if prev_direction.x != direction.x && direction.x != 0:
 		sprite.flip_h = false if direction.x > 0 else true
 	
-func add_debug_indicator(color: Color = Color.RED) -> void:
+func add_debug_indicator(_color: Color = Color.RED) -> void:
 	#var d: Node2D = DEBUG_JUMP_INDICATOR.instantiate()
 	#get_tree().root.add_child(d)
 	#d.global_position = global_position
