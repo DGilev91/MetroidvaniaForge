@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MetroidvaniaForge"
-run/main_scene="uid://bqghrs762lpxt"
+run/main_scene="uid://blprympc7dgxv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://bmil5pf0tm3hp"
 
